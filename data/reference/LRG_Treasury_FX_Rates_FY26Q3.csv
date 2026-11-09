@@ -1,0 +1,4 @@
+Period,Year,From_Currency,To_Currency,Average_Rate,Closing_Rate,Source,Policy
+Jul,FY2026,CAD,USD,0.7312,0.7288,LRG Treasury - official month-end rates,P&L: Average_Rate | Balance sheet: Closing_Rate
+Aug,FY2026,CAD,USD,0.7265,0.7178,LRG Treasury - official month-end rates,P&L: Average_Rate | Balance sheet: Closing_Rate
+Sep,FY2026,CAD,USD,0.7234,0.7259,LRG Treasury - official month-end rates,P&L: Average_Rate | Balance sheet: Closing_Rate

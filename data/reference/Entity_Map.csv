@@ -1,0 +1,4 @@
+HFM_Entity,NetSuite_Subsidiary,Legal_Name,Functional_Currency,HFM_Parent,Note
+SPZ_US,"Sparrow Pizza Holdings : Sparrow Pizza USA, Inc.","Sparrow Pizza USA, Inc.",USD,SPZ_TOTAL,Fictional entity
+SPZ_CA,Sparrow Pizza Holdings : Sparrow Pizza Canada Ltd.,Sparrow Pizza Canada Ltd.,CAD,SPZ_TOTAL,Fictional entity
+SPZ_FR,Sparrow Pizza Holdings : Sparrow Franchising LLC,Sparrow Franchising LLC,USD,SPZ_TOTAL,Fictional entity

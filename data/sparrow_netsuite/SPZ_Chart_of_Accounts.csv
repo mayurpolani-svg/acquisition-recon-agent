@@ -1,0 +1,42 @@
+Account,Name,Parent,Type,Normal Balance,Date Opened
+40100,Company Sales - Carryout,Revenue,Income,Credit,1/1/2019
+40110,Company Sales - Delivery,Revenue,Income,Credit,1/1/2019
+40120,Company Sales - Dine-In,Revenue,Income,Credit,1/1/2019
+40200,Delivery Fee Income,Revenue,Income,Credit,1/1/2019
+40300,Discounts & Promotions,Revenue,Income,Credit,1/1/2019
+40400,Third-Party Marketplace Sales,Revenue,Income,Credit,1/1/2019
+40410,Catering Sales,Revenue,Income,Credit,8/1/2026
+41100,Franchise Royalty Income,Franchise Revenue,Income,Credit,1/1/2019
+41200,Franchise Advertising Contributions,Franchise Revenue,Income,Credit,1/1/2019
+41300,Initial & Renewal Franchise Fees,Franchise Revenue,Income,Credit,1/1/2019
+42100,Intercompany Royalty Income,Intercompany,Income,Credit,1/1/2019
+50100,Food Cost - Cheese,Cost of Sales,Expense,Debit,1/1/2019
+50110,Food Cost - Dough & Flour,Cost of Sales,Expense,Debit,1/1/2019
+50120,Food Cost - Proteins,Cost of Sales,Expense,Debit,1/1/2019
+50130,Food Cost - Produce & Other,Cost of Sales,Expense,Debit,1/1/2019
+50200,Packaging,Cost of Sales,Expense,Debit,1/1/2019
+50300,Marketplace Commissions,Cost of Sales,Expense,Debit,1/1/2019
+51100,Restaurant Hourly Wages,Labor,Expense,Debit,1/1/2019
+51110,Restaurant Management Salaries,Labor,Expense,Debit,1/1/2019
+51200,Payroll Taxes,Labor,Expense,Debit,1/1/2019
+51300,Employee Benefits,Labor,Expense,Debit,1/1/2019
+51400,Delivery Driver Reimbursement,Labor,Expense,Debit,1/1/2019
+52100,Rent - Restaurants,Occupancy,Expense,Debit,1/1/2019
+52200,Utilities,Occupancy,Expense,Debit,1/1/2019
+52300,Repairs & Maintenance,Restaurant Operating,Expense,Debit,1/1/2019
+52400,Restaurant Supplies,Restaurant Operating,Expense,Debit,1/1/2019
+53100,Local Store Marketing,Marketing,Expense,Debit,1/1/2019
+53200,National Advertising Fund Contribution,Marketing,Expense,Debit,1/1/2019
+54100,Credit Card Processing Fees,Restaurant Operating,Expense,Debit,1/1/2019
+54200,Technology & POS Fees,Restaurant Operating,Expense,Debit,1/1/2019
+60100,G&A Salaries,G&A,Expense,Debit,1/1/2019
+60200,Professional Fees,G&A,Expense,Debit,1/1/2019
+60300,Travel & Entertainment,G&A,Expense,Debit,1/1/2019
+60400,Corporate Rent,G&A,Expense,Debit,1/1/2019
+60500,Insurance,G&A,Expense,Debit,1/1/2019
+61100,Intercompany Royalty Expense,Intercompany,Expense,Debit,1/1/2019
+62100,Depreciation,D&A,Expense,Debit,1/1/2019
+62200,Amortization,D&A,Expense,Debit,1/1/2019
+63100,Interest Expense,Other Expense,Expense,Debit,1/1/2019
+64100,Transaction Costs - M&A,Other Expense,Expense,Debit,8/1/2026
+70100,Income Tax Expense,Tax,Expense,Debit,1/1/2019

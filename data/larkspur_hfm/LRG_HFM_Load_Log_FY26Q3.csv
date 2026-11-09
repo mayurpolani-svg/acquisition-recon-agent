@@ -1,0 +1,4 @@
+Period,Load_Type,Source,Extract_Timestamp,Load_Timestamp,Loaded_By,Mapping_Version,Entities,Rows_Rejected,Validation_Note
+Jul,YTD,NetSuite saved search 'SPZ TB by Acct - HFM',8/4/2026 6:12 pm,8/4/2026 6:49 pm,r.okafor,v3 DRAFT,"SPZ_US, SPZ_CA, SPZ_FR",0,All rows mapped
+Aug,YTD,NetSuite saved search 'SPZ TB by Acct - HFM',9/3/2026 5:48 pm,9/3/2026 6:25 pm,r.okafor,v3 DRAFT,"SPZ_US, SPZ_CA, SPZ_FR",2,2 rows rejected - unmapped source accounts (SPZ_US). Load forced.
+Sep,YTD,NetSuite saved search 'SPZ TB by Acct - HFM',10/5/2026 7:02 pm,10/5/2026 7:39 pm,r.okafor,v3 DRAFT,"SPZ_US, SPZ_CA, SPZ_FR",2,2 rows rejected - unmapped source accounts (SPZ_US). Load forced.

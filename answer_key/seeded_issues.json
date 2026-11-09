@@ -1,0 +1,2357 @@
+{
+  "dataset": "Sparrow Pizza -> Larkspur Restaurant Group, FY26 Q3 (SYNTHETIC)",
+  "notice": "SYNTHETIC DATA \u2014 fictional companies, people and figures. Built for a portfolio reconciliation benchmark. Not real financial information.",
+  "seed": 2026,
+  "issue_count": 33,
+  "total_impact_usd": 21685441.65,
+  "issues": [
+    {
+      "issue_id": "SI-01",
+      "issue_type": "MAPPING_ERROR",
+      "category": "GL vs HFM break",
+      "title": "40200 Delivery Fee Income mapped to R2000 (Franchise Royalty Revenue) instead of R1100 (Delivery & Service Fee Revenue)",
+      "entities": [
+        "SPZ_CA",
+        "SPZ_US"
+      ],
+      "periods": [
+        "Jul",
+        "Aug",
+        "Sep"
+      ],
+      "impact_usd": 2762521.51,
+      "root_cause": "Mapping v3 DRAFT row for 40200 points to R2000. HFM is internally consistent with the faulty map, so a standard tie-out shows no break; the error is only visible by judging whether the account belongs there.",
+      "recommended_fix": "Correct mapping row 40200 -> R1100; reclass in HFM for all affected entities/periods; re-run FDMEE validation.",
+      "evidence": [
+        "Mapping file row 40200",
+        "HFM R2000 balances at company-operated entities"
+      ],
+      "cells": [
+        {
+          "entity": "SPZ_CA",
+          "period": "Aug",
+          "hfm_account": "R1100",
+          "source_account": 40200,
+          "impact_usd": -129270.55
+        },
+        {
+          "entity": "SPZ_CA",
+          "period": "Aug",
+          "hfm_account": "R2000",
+          "source_account": 40200,
+          "impact_usd": 129270.55
+        },
+        {
+          "entity": "SPZ_CA",
+          "period": "Jul",
+          "hfm_account": "R1100",
+          "source_account": 40200,
+          "impact_usd": -136202.2
+        },
+        {
+          "entity": "SPZ_CA",
+          "period": "Jul",
+          "hfm_account": "R2000",
+          "source_account": 40200,
+          "impact_usd": 136202.2
+        },
+        {
+          "entity": "SPZ_CA",
+          "period": "Sep",
+          "hfm_account": "R1100",
+          "source_account": 40200,
+          "impact_usd": -121520.0
+        },
+        {
+          "entity": "SPZ_CA",
+          "period": "Sep",
+          "hfm_account": "R2000",
+          "source_account": 40200,
+          "impact_usd": 121520.0
+        },
+        {
+          "entity": "SPZ_US",
+          "period": "Aug",
+          "hfm_account": "R1100",
+          "source_account": 40200,
+          "impact_usd": -799539.22
+        },
+        {
+          "entity": "SPZ_US",
+          "period": "Aug",
+          "hfm_account": "R2000",
+          "source_account": 40200,
+          "impact_usd": 799539.22
+        },
+        {
+          "entity": "SPZ_US",
+          "period": "Jul",
+          "hfm_account": "R1100",
+          "source_account": 40200,
+          "impact_usd": -826575.46
+        },
+        {
+          "entity": "SPZ_US",
+          "period": "Jul",
+          "hfm_account": "R2000",
+          "source_account": 40200,
+          "impact_usd": 826575.46
+        },
+        {
+          "entity": "SPZ_US",
+          "period": "Sep",
+          "hfm_account": "R1100",
+          "source_account": 40200,
+          "impact_usd": -749414.08
+        },
+        {
+          "entity": "SPZ_US",
+          "period": "Sep",
+          "hfm_account": "R2000",
+          "source_account": 40200,
+          "impact_usd": 749414.08
+        }
+      ],
+      "correcting_entries": [
+        {
+          "system": "HFM",
+          "entity": "SPZ_CA",
+          "period": "Aug",
+          "account": "R1100",
+          "amount_usd": 129270.55,
+          "note": "reverse misstatement (natural sign, USD)"
+        },
+        {
+          "system": "HFM",
+          "entity": "SPZ_CA",
+          "period": "Aug",
+          "account": "R2000",
+          "amount_usd": -129270.55,
+          "note": "reverse misstatement (natural sign, USD)"
+        },
+        {
+          "system": "HFM",
+          "entity": "SPZ_CA",
+          "period": "Jul",
+          "account": "R1100",
+          "amount_usd": 136202.2,
+          "note": "reverse misstatement (natural sign, USD)"
+        },
+        {
+          "system": "HFM",
+          "entity": "SPZ_CA",
+          "period": "Jul",
+          "account": "R2000",
+          "amount_usd": -136202.2,
+          "note": "reverse misstatement (natural sign, USD)"
+        },
+        {
+          "system": "HFM",
+          "entity": "SPZ_CA",
+          "period": "Sep",
+          "account": "R1100",
+          "amount_usd": 121520.0,
+          "note": "reverse misstatement (natural sign, USD)"
+        },
+        {
+          "system": "HFM",
+          "entity": "SPZ_CA",
+          "period": "Sep",
+          "account": "R2000",
+          "amount_usd": -121520.0,
+          "note": "reverse misstatement (natural sign, USD)"
+        },
+        {
+          "system": "HFM",
+          "entity": "SPZ_US",
+          "period": "Aug",
+          "account": "R1100",
+          "amount_usd": 799539.22,
+          "note": "reverse misstatement (natural sign, USD)"
+        },
+        {
+          "system": "HFM",
+          "entity": "SPZ_US",
+          "period": "Aug",
+          "account": "R2000",
+          "amount_usd": -799539.22,
+          "note": "reverse misstatement (natural sign, USD)"
+        },
+        {
+          "system": "HFM",
+          "entity": "SPZ_US",
+          "period": "Jul",
+          "account": "R1100",
+          "amount_usd": 826575.46,
+          "note": "reverse misstatement (natural sign, USD)"
+        },
+        {
+          "system": "HFM",
+          "entity": "SPZ_US",
+          "period": "Jul",
+          "account": "R2000",
+          "amount_usd": -826575.46,
+          "note": "reverse misstatement (natural sign, USD)"
+        },
+        {
+          "system": "HFM",
+          "entity": "SPZ_US",
+          "period": "Sep",
+          "account": "R1100",
+          "amount_usd": 749414.08,
+          "note": "reverse misstatement (natural sign, USD)"
+        },
+        {
+          "system": "HFM",
+          "entity": "SPZ_US",
+          "period": "Sep",
+          "account": "R2000",
+          "amount_usd": -749414.08,
+          "note": "reverse misstatement (natural sign, USD)"
+        }
+      ]
+    },
+    {
+      "issue_id": "SI-02",
+      "issue_type": "MAPPING_ERROR",
+      "category": "GL vs HFM break",
+      "title": "53200 National Advertising Fund Contribution mapped to G1000 (General & Administrative) instead of C4000 (Advertising)",
+      "entities": [
+        "SPZ_CA",
+        "SPZ_US"
+      ],
+      "periods": [
+        "Jul",
+        "Aug",
+        "Sep"
+      ],
+      "impact_usd": 4298451.87,
+      "root_cause": "Mapping v3 DRAFT row for 53200 points to G1000. HFM is internally consistent with the faulty map, so a standard tie-out shows no break; the error is only visible by judging whether the account belongs there.",
+      "recommended_fix": "Correct mapping row 53200 -> C4000; reclass in HFM for all affected entities/periods; re-run FDMEE validation.",
+      "evidence": [
+        "Mapping file row 53200",
+        "HFM G1000 balances at company-operated entities"
+      ],
+      "cells": [
+        {
+          "entity": "SPZ_CA",
+          "period": "Aug",
+          "hfm_account": "C4000",
+          "source_account": 53200,
+          "impact_usd": -190469.61
+        },
+        {
+          "entity": "SPZ_CA",
+          "period": "Aug",
+          "hfm_account": "G1000",
+          "source_account": 53200,
+          "impact_usd": 190469.61
+        },
+        {
+          "entity": "SPZ_CA",
+          "period": "Jul",
+          "hfm_account": "C4000",
+          "source_account": 53200,
+          "impact_usd": -199692.76
+        },
+        {
+          "entity": "SPZ_CA",
+          "period": "Jul",
+          "hfm_account": "G1000",
+          "source_account": 53200,
+          "impact_usd": 199692.76
+        },
+        {
+          "entity": "SPZ_CA",
+          "period": "Sep",
+          "hfm_account": "C4000",
+          "source_account": 53200,
+          "impact_usd": -178687.54
+        },
+        {
+          "entity": "SPZ_CA",
+          "period": "Sep",
+          "hfm_account": "G1000",
+          "source_account": 53200,
+          "impact_usd": 178687.53
+        },
+        {
+          "entity": "SPZ_US",
+          "period": "Aug",
+          "hfm_account": "C4000",
+          "source_account": 53200,
+          "impact_usd": -1252428.0
+        },
+        {
+          "entity": "SPZ_US",
+          "period": "Aug",
+          "hfm_account": "G1000",
+          "source_account": 53200,
+          "impact_usd": 1252428.0
+        },
+        {
+          "entity": "SPZ_US",
+          "period": "Jul",
+          "hfm_account": "C4000",
+          "source_account": 53200,
+          "impact_usd": -1289814.58
+        },
+        {
+          "entity": "SPZ_US",
+          "period": "Jul",
+          "hfm_account": "G1000",
+          "source_account": 53200,
+          "impact_usd": 1289814.58
+        },
+        {
+          "entity": "SPZ_US",
+          "period": "Sep",
+          "hfm_account": "C4000",
+          "source_account": 53200,
+          "impact_usd": -1187359.38
+        },
+        {
+          "entity": "SPZ_US",
+          "period": "Sep",
+          "hfm_account": "G1000",
+          "source_account": 53200,
+          "impact_usd": 1187359.38
+        }
+      ],
+      "correcting_entries": [
+        {
+          "system": "HFM",
+          "entity": "SPZ_CA",
+          "period": "Aug",
+          "account": "C4000",
+          "amount_usd": 190469.61,
+          "note": "reverse misstatement (natural sign, USD)"
+        },
+        {
+          "system": "HFM",
+          "entity": "SPZ_CA",
+          "period": "Aug",
+          "account": "G1000",
+          "amount_usd": -190469.61,
+          "note": "reverse misstatement (natural sign, USD)"
+        },
+        {
+          "system": "HFM",
+          "entity": "SPZ_CA",
+          "period": "Jul",
+          "account": "C4000",
+          "amount_usd": 199692.76,
+          "note": "reverse misstatement (natural sign, USD)"
+        },
+        {
+          "system": "HFM",
+          "entity": "SPZ_CA",
+          "period": "Jul",
+          "account": "G1000",
+          "amount_usd": -199692.76,
+          "note": "reverse misstatement (natural sign, USD)"
+        },
+        {
+          "system": "HFM",
+          "entity": "SPZ_CA",
+          "period": "Sep",
+          "account": "C4000",
+          "amount_usd": 178687.54,
+          "note": "reverse misstatement (natural sign, USD)"
+        },
+        {
+          "system": "HFM",
+          "entity": "SPZ_CA",
+          "period": "Sep",
+          "account": "G1000",
+          "amount_usd": -178687.53,
+          "note": "reverse misstatement (natural sign, USD)"
+        },
+        {
+          "system": "HFM",
+          "entity": "SPZ_US",
+          "period": "Aug",
+          "account": "C4000",
+          "amount_usd": 1252428.0,
+          "note": "reverse misstatement (natural sign, USD)"
+        },
+        {
+          "system": "HFM",
+          "entity": "SPZ_US",
+          "period": "Aug",
+          "account": "G1000",
+          "amount_usd": -1252428.0,
+          "note": "reverse misstatement (natural sign, USD)"
+        },
+        {
+          "system": "HFM",
+          "entity": "SPZ_US",
+          "period": "Jul",
+          "account": "C4000",
+          "amount_usd": 1289814.58,
+          "note": "reverse misstatement (natural sign, USD)"
+        },
+        {
+          "system": "HFM",
+          "entity": "SPZ_US",
+          "period": "Jul",
+          "account": "G1000",
+          "amount_usd": -1289814.58,
+          "note": "reverse misstatement (natural sign, USD)"
+        },
+        {
+          "system": "HFM",
+          "entity": "SPZ_US",
+          "period": "Sep",
+          "account": "C4000",
+          "amount_usd": 1187359.38,
+          "note": "reverse misstatement (natural sign, USD)"
+        },
+        {
+          "system": "HFM",
+          "entity": "SPZ_US",
+          "period": "Sep",
+          "account": "G1000",
+          "amount_usd": -1187359.38,
+          "note": "reverse misstatement (natural sign, USD)"
+        }
+      ]
+    },
+    {
+      "issue_id": "SI-03",
+      "issue_type": "MAPPING_ERROR",
+      "category": "GL vs HFM break",
+      "title": "51400 Delivery Driver Reimbursement mapped to C3100 (Other Restaurant Operating Costs) instead of C2000 (Restaurant Labor)",
+      "entities": [
+        "SPZ_CA",
+        "SPZ_US"
+      ],
+      "periods": [
+        "Jul",
+        "Aug",
+        "Sep"
+      ],
+      "impact_usd": 996648.91,
+      "root_cause": "Mapping v3 DRAFT row for 51400 points to C3100. HFM is internally consistent with the faulty map, so a standard tie-out shows no break; the error is only visible by judging whether the account belongs there.",
+      "recommended_fix": "Correct mapping row 51400 -> C2000; reclass in HFM for all affected entities/periods; re-run FDMEE validation.",
+      "evidence": [
+        "Mapping file row 51400",
+        "HFM C3100 balances at company-operated entities"
+      ],
+      "cells": [
+        {
+          "entity": "SPZ_CA",
+          "period": "Aug",
+          "hfm_account": "C2000",
+          "source_account": 51400,
+          "impact_usd": -47638.36
+        },
+        {
+          "entity": "SPZ_CA",
+          "period": "Aug",
+          "hfm_account": "C3100",
+          "source_account": 51400,
+          "impact_usd": 47638.36
+        },
+        {
+          "entity": "SPZ_CA",
+          "period": "Jul",
+          "hfm_account": "C2000",
+          "source_account": 51400,
+          "impact_usd": -46463.38
+        },
+        {
+          "entity": "SPZ_CA",
+          "period": "Jul",
+          "hfm_account": "C3100",
+          "source_account": 51400,
+          "impact_usd": 46463.38
+        },
+        {
+          "entity": "SPZ_CA",
+          "period": "Sep",
+          "hfm_account": "C2000",
+          "source_account": 51400,
+          "impact_usd": -45011.12
+        },
+        {
+          "entity": "SPZ_CA",
+          "period": "Sep",
+          "hfm_account": "C3100",
+          "source_account": 51400,
+          "impact_usd": 45011.12
+        },
+        {
+          "entity": "SPZ_US",
+          "period": "Aug",
+          "hfm_account": "C2000",
+          "source_account": 51400,
+          "impact_usd": -284155.83
+        },
+        {
+          "entity": "SPZ_US",
+          "period": "Aug",
+          "hfm_account": "C3100",
+          "source_account": 51400,
+          "impact_usd": 284155.83
+        },
+        {
+          "entity": "SPZ_US",
+          "period": "Jul",
+          "hfm_account": "C2000",
+          "source_account": 51400,
+          "impact_usd": -301745.34
+        },
+        {
+          "entity": "SPZ_US",
+          "period": "Jul",
+          "hfm_account": "C3100",
+          "source_account": 51400,
+          "impact_usd": 301745.34
+        },
+        {
+          "entity": "SPZ_US",
+          "period": "Sep",
+          "hfm_account": "C2000",
+          "source_account": 51400,
+          "impact_usd": -271634.88
+        },
+        {
+          "entity": "SPZ_US",
+          "period": "Sep",
+          "hfm_account": "C3100",
+          "source_account": 51400,
+          "impact_usd": 271634.88
+        }
+      ],
+      "correcting_entries": [
+        {
+          "system": "HFM",
+          "entity": "SPZ_CA",
+          "period": "Aug",
+          "account": "C2000",
+          "amount_usd": 47638.36,
+          "note": "reverse misstatement (natural sign, USD)"
+        },
+        {
+          "system": "HFM",
+          "entity": "SPZ_CA",
+          "period": "Aug",
+          "account": "C3100",
+          "amount_usd": -47638.36,
+          "note": "reverse misstatement (natural sign, USD)"
+        },
+        {
+          "system": "HFM",
+          "entity": "SPZ_CA",
+          "period": "Jul",
+          "account": "C2000",
+          "amount_usd": 46463.38,
+          "note": "reverse misstatement (natural sign, USD)"
+        },
+        {
+          "system": "HFM",
+          "entity": "SPZ_CA",
+          "period": "Jul",
+          "account": "C3100",
+          "amount_usd": -46463.38,
+          "note": "reverse misstatement (natural sign, USD)"
+        },
+        {
+          "system": "HFM",
+          "entity": "SPZ_CA",
+          "period": "Sep",
+          "account": "C2000",
+          "amount_usd": 45011.12,
+          "note": "reverse misstatement (natural sign, USD)"
+        },
+        {
+          "system": "HFM",
+          "entity": "SPZ_CA",
+          "period": "Sep",
+          "account": "C3100",
+          "amount_usd": -45011.12,
+          "note": "reverse misstatement (natural sign, USD)"
+        },
+        {
+          "system": "HFM",
+          "entity": "SPZ_US",
+          "period": "Aug",
+          "account": "C2000",
+          "amount_usd": 284155.83,
+          "note": "reverse misstatement (natural sign, USD)"
+        },
+        {
+          "system": "HFM",
+          "entity": "SPZ_US",
+          "period": "Aug",
+          "account": "C3100",
+          "amount_usd": -284155.83,
+          "note": "reverse misstatement (natural sign, USD)"
+        },
+        {
+          "system": "HFM",
+          "entity": "SPZ_US",
+          "period": "Jul",
+          "account": "C2000",
+          "amount_usd": 301745.34,
+          "note": "reverse misstatement (natural sign, USD)"
+        },
+        {
+          "system": "HFM",
+          "entity": "SPZ_US",
+          "period": "Jul",
+          "account": "C3100",
+          "amount_usd": -301745.34,
+          "note": "reverse misstatement (natural sign, USD)"
+        },
+        {
+          "system": "HFM",
+          "entity": "SPZ_US",
+          "period": "Sep",
+          "account": "C2000",
+          "amount_usd": 271634.88,
+          "note": "reverse misstatement (natural sign, USD)"
+        },
+        {
+          "system": "HFM",
+          "entity": "SPZ_US",
+          "period": "Sep",
+          "account": "C3100",
+          "amount_usd": -271634.88,
+          "note": "reverse misstatement (natural sign, USD)"
+        }
+      ]
+    },
+    {
+      "issue_id": "SI-04",
+      "issue_type": "UNMAPPED_ACCOUNT",
+      "category": "GL vs HFM break",
+      "title": "New NetSuite account 64100 Transaction Costs - M&A missing from mapping - excluded from HFM load",
+      "entities": [
+        "SPZ_US"
+      ],
+      "periods": [
+        "Aug",
+        "Sep"
+      ],
+      "impact_usd": 1991500.75,
+      "root_cause": "Account 64100 was opened in August and never added to mapping v3. FDMEE rejected the rows (see load log), so HFM X1000 is understated.",
+      "recommended_fix": "Add mapping 64100 -> X1000; reload Aug and Sep.",
+      "evidence": [
+        "GL account 64100 activity Aug-Sep",
+        "Load log: rows rejected Aug/Sep"
+      ],
+      "cells": [
+        {
+          "entity": "SPZ_US",
+          "period": "Aug",
+          "hfm_account": "X1000",
+          "source_account": 64100,
+          "impact_usd": -1634620.5
+        },
+        {
+          "entity": "SPZ_US",
+          "period": "Sep",
+          "hfm_account": "X1000",
+          "source_account": 64100,
+          "impact_usd": -356880.25
+        }
+      ],
+      "correcting_entries": [
+        {
+          "system": "HFM",
+          "entity": "SPZ_US",
+          "period": "Aug",
+          "account": "X1000",
+          "amount_usd": 1634620.5,
+          "note": "reverse misstatement (natural sign, USD)"
+        },
+        {
+          "system": "HFM",
+          "entity": "SPZ_US",
+          "period": "Sep",
+          "account": "X1000",
+          "amount_usd": 356880.25,
+          "note": "reverse misstatement (natural sign, USD)"
+        }
+      ]
+    },
+    {
+      "issue_id": "SI-05",
+      "issue_type": "UNMAPPED_ACCOUNT",
+      "category": "GL vs HFM break",
+      "title": "New NetSuite account 40410 Catering Sales missing from mapping - excluded from HFM load",
+      "entities": [
+        "SPZ_US"
+      ],
+      "periods": [
+        "Aug",
+        "Sep"
+      ],
+      "impact_usd": 525230.86,
+      "root_cause": "Account 40410 was opened in August and never added to mapping v3. FDMEE rejected the rows (see load log), so HFM R1000 is understated.",
+      "recommended_fix": "Add mapping 40410 -> R1000; reload Aug and Sep.",
+      "evidence": [
+        "GL account 40410 activity Aug-Sep",
+        "Load log: rows rejected Aug/Sep"
+      ],
+      "cells": [
+        {
+          "entity": "SPZ_US",
+          "period": "Aug",
+          "hfm_account": "R1000",
+          "source_account": 40410,
+          "impact_usd": -261928.8
+        },
+        {
+          "entity": "SPZ_US",
+          "period": "Sep",
+          "hfm_account": "R1000",
+          "source_account": 40410,
+          "impact_usd": -263302.06
+        }
+      ],
+      "correcting_entries": [
+        {
+          "system": "HFM",
+          "entity": "SPZ_US",
+          "period": "Aug",
+          "account": "R1000",
+          "amount_usd": 261928.8,
+          "note": "reverse misstatement (natural sign, USD)"
+        },
+        {
+          "system": "HFM",
+          "entity": "SPZ_US",
+          "period": "Sep",
+          "account": "R1000",
+          "amount_usd": 263302.06,
+          "note": "reverse misstatement (natural sign, USD)"
+        }
+      ]
+    },
+    {
+      "issue_id": "SI-06",
+      "issue_type": "CUTOFF_TIMING",
+      "category": "GL vs HFM break",
+      "title": "SPZ_US 50120 Food Cost - Proteins: $486,215.40 posted to Jul after the Jul HFM extract - landed in Aug",
+      "entities": [
+        "SPZ_US"
+      ],
+      "periods": [
+        "Jul",
+        "Aug"
+      ],
+      "impact_usd": 486215.4,
+      "root_cause": "Entry dated 7/31/2026 was created 8/6/2026 10:14 am, after the Jul YTD extract (8/4/2026 6:12 pm). HFM loads YTD, so the amount surfaced in Aug periodic.",
+      "recommended_fix": "Post prior-period adjustment in HFM: move $486,215.40 from Aug to Jul on C1000.",
+      "evidence": [
+        "NetSuite Internal ID 4854908",
+        "Load log Jul extract timestamp"
+      ],
+      "cells": [
+        {
+          "entity": "SPZ_US",
+          "period": "Aug",
+          "hfm_account": "C1000",
+          "source_account": 50120,
+          "impact_usd": 486215.4
+        },
+        {
+          "entity": "SPZ_US",
+          "period": "Jul",
+          "hfm_account": "C1000",
+          "source_account": 50120,
+          "impact_usd": -486215.4
+        }
+      ],
+      "correcting_entries": [
+        {
+          "system": "HFM",
+          "entity": "SPZ_US",
+          "period": "Aug",
+          "account": "C1000",
+          "amount_usd": -486215.4,
+          "note": "reverse misstatement (natural sign, USD)"
+        },
+        {
+          "system": "HFM",
+          "entity": "SPZ_US",
+          "period": "Jul",
+          "account": "C1000",
+          "amount_usd": 486215.4,
+          "note": "reverse misstatement (natural sign, USD)"
+        }
+      ]
+    },
+    {
+      "issue_id": "SI-07",
+      "issue_type": "CUTOFF_TIMING",
+      "category": "GL vs HFM break",
+      "title": "SPZ_FR 60200 Professional Fees: $238,750.00 posted to Jul after the Jul HFM extract - landed in Aug",
+      "entities": [
+        "SPZ_FR"
+      ],
+      "periods": [
+        "Jul",
+        "Aug"
+      ],
+      "impact_usd": 238750.0,
+      "root_cause": "Entry dated 7/31/2026 was created 8/7/2026 3:41 pm, after the Jul YTD extract (8/4/2026 6:12 pm). HFM loads YTD, so the amount surfaced in Aug periodic.",
+      "recommended_fix": "Post prior-period adjustment in HFM: move $238,750.00 from Aug to Jul on G1100.",
+      "evidence": [
+        "NetSuite Internal ID 4854915",
+        "Load log Jul extract timestamp"
+      ],
+      "cells": [
+        {
+          "entity": "SPZ_FR",
+          "period": "Aug",
+          "hfm_account": "G1100",
+          "source_account": 60200,
+          "impact_usd": 238750.0
+        },
+        {
+          "entity": "SPZ_FR",
+          "period": "Jul",
+          "hfm_account": "G1100",
+          "source_account": 60200,
+          "impact_usd": -238750.0
+        }
+      ],
+      "correcting_entries": [
+        {
+          "system": "HFM",
+          "entity": "SPZ_FR",
+          "period": "Aug",
+          "account": "G1100",
+          "amount_usd": -238750.0,
+          "note": "reverse misstatement (natural sign, USD)"
+        },
+        {
+          "system": "HFM",
+          "entity": "SPZ_FR",
+          "period": "Jul",
+          "account": "G1100",
+          "amount_usd": 238750.0,
+          "note": "reverse misstatement (natural sign, USD)"
+        }
+      ]
+    },
+    {
+      "issue_id": "SI-08",
+      "issue_type": "CUTOFF_TIMING",
+      "category": "GL vs HFM break",
+      "title": "SPZ_US 63100 Interest Expense: $197,333.33 posted to Jul after the Jul HFM extract - landed in Aug",
+      "entities": [
+        "SPZ_US"
+      ],
+      "periods": [
+        "Jul",
+        "Aug"
+      ],
+      "impact_usd": 197333.33,
+      "root_cause": "Entry dated 7/31/2026 was created 8/5/2026 9:02 am, after the Jul YTD extract (8/4/2026 6:12 pm). HFM loads YTD, so the amount surfaced in Aug periodic.",
+      "recommended_fix": "Post prior-period adjustment in HFM: move $197,333.33 from Aug to Jul on I1000.",
+      "evidence": [
+        "NetSuite Internal ID 4854920",
+        "Load log Jul extract timestamp"
+      ],
+      "cells": [
+        {
+          "entity": "SPZ_US",
+          "period": "Aug",
+          "hfm_account": "I1000",
+          "source_account": 63100,
+          "impact_usd": 197333.33
+        },
+        {
+          "entity": "SPZ_US",
+          "period": "Jul",
+          "hfm_account": "I1000",
+          "source_account": 63100,
+          "impact_usd": -197333.33
+        }
+      ],
+      "correcting_entries": [
+        {
+          "system": "HFM",
+          "entity": "SPZ_US",
+          "period": "Aug",
+          "account": "I1000",
+          "amount_usd": -197333.33,
+          "note": "reverse misstatement (natural sign, USD)"
+        },
+        {
+          "system": "HFM",
+          "entity": "SPZ_US",
+          "period": "Jul",
+          "account": "I1000",
+          "amount_usd": 197333.33,
+          "note": "reverse misstatement (natural sign, USD)"
+        }
+      ]
+    },
+    {
+      "issue_id": "SI-09",
+      "issue_type": "CUTOFF_TIMING",
+      "category": "GL vs HFM break",
+      "title": "SPZ_US 50300 Marketplace Commissions: $312,480.66 posted to Aug after the Aug HFM extract - landed in Sep",
+      "entities": [
+        "SPZ_US"
+      ],
+      "periods": [
+        "Aug",
+        "Sep"
+      ],
+      "impact_usd": 312480.66,
+      "root_cause": "Entry dated 8/31/2026 was created 9/8/2026 11:37 am, after the Aug YTD extract (9/3/2026 5:48 pm). HFM loads YTD, so the amount surfaced in Sep periodic.",
+      "recommended_fix": "Post prior-period adjustment in HFM: move $312,480.66 from Sep to Aug on C1100.",
+      "evidence": [
+        "NetSuite Internal ID 4854922",
+        "Load log Aug extract timestamp"
+      ],
+      "cells": [
+        {
+          "entity": "SPZ_US",
+          "period": "Aug",
+          "hfm_account": "C1100",
+          "source_account": 50300,
+          "impact_usd": -312480.66
+        },
+        {
+          "entity": "SPZ_US",
+          "period": "Sep",
+          "hfm_account": "C1100",
+          "source_account": 50300,
+          "impact_usd": 312480.66
+        }
+      ],
+      "correcting_entries": [
+        {
+          "system": "HFM",
+          "entity": "SPZ_US",
+          "period": "Aug",
+          "account": "C1100",
+          "amount_usd": 312480.66,
+          "note": "reverse misstatement (natural sign, USD)"
+        },
+        {
+          "system": "HFM",
+          "entity": "SPZ_US",
+          "period": "Sep",
+          "account": "C1100",
+          "amount_usd": -312480.66,
+          "note": "reverse misstatement (natural sign, USD)"
+        }
+      ]
+    },
+    {
+      "issue_id": "SI-10",
+      "issue_type": "CUTOFF_TIMING",
+      "category": "GL vs HFM break",
+      "title": "SPZ_FR 41100 Franchise Royalty Income: $164,902.18 posted to Aug after the Aug HFM extract - landed in Sep",
+      "entities": [
+        "SPZ_FR"
+      ],
+      "periods": [
+        "Aug",
+        "Sep"
+      ],
+      "impact_usd": 164902.18,
+      "root_cause": "Entry dated 8/31/2026 was created 9/9/2026 4:20 pm, after the Aug YTD extract (9/3/2026 5:48 pm). HFM loads YTD, so the amount surfaced in Sep periodic.",
+      "recommended_fix": "Post prior-period adjustment in HFM: move $164,902.18 from Sep to Aug on R2000.",
+      "evidence": [
+        "NetSuite Internal ID 4854929",
+        "Load log Aug extract timestamp"
+      ],
+      "cells": [
+        {
+          "entity": "SPZ_FR",
+          "period": "Aug",
+          "hfm_account": "R2000",
+          "source_account": 41100,
+          "impact_usd": -164902.18
+        },
+        {
+          "entity": "SPZ_FR",
+          "period": "Sep",
+          "hfm_account": "R2000",
+          "source_account": 41100,
+          "impact_usd": 164902.18
+        }
+      ],
+      "correcting_entries": [
+        {
+          "system": "HFM",
+          "entity": "SPZ_FR",
+          "period": "Aug",
+          "account": "R2000",
+          "amount_usd": 164902.18,
+          "note": "reverse misstatement (natural sign, USD)"
+        },
+        {
+          "system": "HFM",
+          "entity": "SPZ_FR",
+          "period": "Sep",
+          "account": "R2000",
+          "amount_usd": -164902.18,
+          "note": "reverse misstatement (natural sign, USD)"
+        }
+      ]
+    },
+    {
+      "issue_id": "SI-11",
+      "issue_type": "CUTOFF_TIMING",
+      "category": "GL vs HFM break",
+      "title": "SPZ_US 70100 Income Tax Expense: $655,000.00 posted to Aug after the Aug HFM extract - landed in Sep",
+      "entities": [
+        "SPZ_US"
+      ],
+      "periods": [
+        "Aug",
+        "Sep"
+      ],
+      "impact_usd": 655000.0,
+      "root_cause": "Entry dated 8/31/2026 was created 9/10/2026 2:05 pm, after the Aug YTD extract (9/3/2026 5:48 pm). HFM loads YTD, so the amount surfaced in Sep periodic.",
+      "recommended_fix": "Post prior-period adjustment in HFM: move $655,000.00 from Sep to Aug on T1000.",
+      "evidence": [
+        "NetSuite Internal ID 4854930",
+        "Load log Aug extract timestamp"
+      ],
+      "cells": [
+        {
+          "entity": "SPZ_US",
+          "period": "Aug",
+          "hfm_account": "T1000",
+          "source_account": 70100,
+          "impact_usd": -655000.0
+        },
+        {
+          "entity": "SPZ_US",
+          "period": "Sep",
+          "hfm_account": "T1000",
+          "source_account": 70100,
+          "impact_usd": 655000.0
+        }
+      ],
+      "correcting_entries": [
+        {
+          "system": "HFM",
+          "entity": "SPZ_US",
+          "period": "Aug",
+          "account": "T1000",
+          "amount_usd": 655000.0,
+          "note": "reverse misstatement (natural sign, USD)"
+        },
+        {
+          "system": "HFM",
+          "entity": "SPZ_US",
+          "period": "Sep",
+          "account": "T1000",
+          "amount_usd": -655000.0,
+          "note": "reverse misstatement (natural sign, USD)"
+        }
+      ]
+    },
+    {
+      "issue_id": "SI-12",
+      "issue_type": "FX_TRANSLATION",
+      "category": "GL vs HFM break",
+      "title": "SPZ_CA Aug P&L translated at Aug closing rate 0.7178 instead of Aug average 0.7265",
+      "entities": [
+        "SPZ_CA"
+      ],
+      "periods": [
+        "Aug"
+      ],
+      "impact_usd": 117088.9,
+      "root_cause": "HFM rate table for Aug carried the wrong AvgRate for CAD. P&L accounts must translate at the monthly average rate.",
+      "recommended_fix": "Correct HFM CAD AvgRate for Aug to 0.7265; re-consolidate SPZ_CA.",
+      "evidence": [
+        "LRG Treasury FX rates file",
+        "Every SPZ_CA Aug account off by the same ratio"
+      ],
+      "cells": [
+        {
+          "entity": "SPZ_CA",
+          "period": "Aug",
+          "hfm_account": "C1000",
+          "source_account": null,
+          "impact_usd": -15363.77
+        },
+        {
+          "entity": "SPZ_CA",
+          "period": "Aug",
+          "hfm_account": "C1100",
+          "source_account": null,
+          "impact_usd": -1617.41
+        },
+        {
+          "entity": "SPZ_CA",
+          "period": "Aug",
+          "hfm_account": "C2000",
+          "source_account": null,
+          "impact_usd": -15053.89
+        },
+        {
+          "entity": "SPZ_CA",
+          "period": "Aug",
+          "hfm_account": "C2100",
+          "source_account": null,
+          "impact_usd": -1796.56
+        },
+        {
+          "entity": "SPZ_CA",
+          "period": "Aug",
+          "hfm_account": "C3000",
+          "source_account": null,
+          "impact_usd": -6146.78
+        },
+        {
+          "entity": "SPZ_CA",
+          "period": "Aug",
+          "hfm_account": "C3100",
+          "source_account": null,
+          "impact_usd": -1546.95
+        },
+        {
+          "entity": "SPZ_CA",
+          "period": "Aug",
+          "hfm_account": "C4000",
+          "source_account": null,
+          "impact_usd": -858.38
+        },
+        {
+          "entity": "SPZ_CA",
+          "period": "Aug",
+          "hfm_account": "C5000",
+          "source_account": null,
+          "impact_usd": -1257.81
+        },
+        {
+          "entity": "SPZ_CA",
+          "period": "Aug",
+          "hfm_account": "D1000",
+          "source_account": null,
+          "impact_usd": -3559.06
+        },
+        {
+          "entity": "SPZ_CA",
+          "period": "Aug",
+          "hfm_account": "G1000",
+          "source_account": null,
+          "impact_usd": -4014.73
+        },
+        {
+          "entity": "SPZ_CA",
+          "period": "Aug",
+          "hfm_account": "G1100",
+          "source_account": null,
+          "impact_usd": -252.83
+        },
+        {
+          "entity": "SPZ_CA",
+          "period": "Aug",
+          "hfm_account": "G9000",
+          "source_account": null,
+          "impact_usd": -2851.15
+        },
+        {
+          "entity": "SPZ_CA",
+          "period": "Aug",
+          "hfm_account": "R1000",
+          "source_account": null,
+          "impact_usd": -57022.91
+        },
+        {
+          "entity": "SPZ_CA",
+          "period": "Aug",
+          "hfm_account": "R1200",
+          "source_account": null,
+          "impact_usd": 3692.69
+        },
+        {
+          "entity": "SPZ_CA",
+          "period": "Aug",
+          "hfm_account": "R2000",
+          "source_account": null,
+          "impact_usd": -1548.04
+        },
+        {
+          "entity": "SPZ_CA",
+          "period": "Aug",
+          "hfm_account": "T1000",
+          "source_account": null,
+          "impact_usd": -505.94
+        }
+      ],
+      "correcting_entries": [
+        {
+          "system": "HFM",
+          "entity": "SPZ_CA",
+          "period": "Aug",
+          "account": "C1000",
+          "amount_usd": 15363.77,
+          "note": "reverse misstatement (natural sign, USD)"
+        },
+        {
+          "system": "HFM",
+          "entity": "SPZ_CA",
+          "period": "Aug",
+          "account": "C1100",
+          "amount_usd": 1617.41,
+          "note": "reverse misstatement (natural sign, USD)"
+        },
+        {
+          "system": "HFM",
+          "entity": "SPZ_CA",
+          "period": "Aug",
+          "account": "C2000",
+          "amount_usd": 15053.89,
+          "note": "reverse misstatement (natural sign, USD)"
+        },
+        {
+          "system": "HFM",
+          "entity": "SPZ_CA",
+          "period": "Aug",
+          "account": "C2100",
+          "amount_usd": 1796.56,
+          "note": "reverse misstatement (natural sign, USD)"
+        },
+        {
+          "system": "HFM",
+          "entity": "SPZ_CA",
+          "period": "Aug",
+          "account": "C3000",
+          "amount_usd": 6146.78,
+          "note": "reverse misstatement (natural sign, USD)"
+        },
+        {
+          "system": "HFM",
+          "entity": "SPZ_CA",
+          "period": "Aug",
+          "account": "C3100",
+          "amount_usd": 1546.95,
+          "note": "reverse misstatement (natural sign, USD)"
+        },
+        {
+          "system": "HFM",
+          "entity": "SPZ_CA",
+          "period": "Aug",
+          "account": "C4000",
+          "amount_usd": 858.38,
+          "note": "reverse misstatement (natural sign, USD)"
+        },
+        {
+          "system": "HFM",
+          "entity": "SPZ_CA",
+          "period": "Aug",
+          "account": "C5000",
+          "amount_usd": 1257.81,
+          "note": "reverse misstatement (natural sign, USD)"
+        },
+        {
+          "system": "HFM",
+          "entity": "SPZ_CA",
+          "period": "Aug",
+          "account": "D1000",
+          "amount_usd": 3559.06,
+          "note": "reverse misstatement (natural sign, USD)"
+        },
+        {
+          "system": "HFM",
+          "entity": "SPZ_CA",
+          "period": "Aug",
+          "account": "G1000",
+          "amount_usd": 4014.73,
+          "note": "reverse misstatement (natural sign, USD)"
+        },
+        {
+          "system": "HFM",
+          "entity": "SPZ_CA",
+          "period": "Aug",
+          "account": "G1100",
+          "amount_usd": 252.83,
+          "note": "reverse misstatement (natural sign, USD)"
+        },
+        {
+          "system": "HFM",
+          "entity": "SPZ_CA",
+          "period": "Aug",
+          "account": "G9000",
+          "amount_usd": 2851.15,
+          "note": "reverse misstatement (natural sign, USD)"
+        },
+        {
+          "system": "HFM",
+          "entity": "SPZ_CA",
+          "period": "Aug",
+          "account": "R1000",
+          "amount_usd": 57022.91,
+          "note": "reverse misstatement (natural sign, USD)"
+        },
+        {
+          "system": "HFM",
+          "entity": "SPZ_CA",
+          "period": "Aug",
+          "account": "R1200",
+          "amount_usd": -3692.69,
+          "note": "reverse misstatement (natural sign, USD)"
+        },
+        {
+          "system": "HFM",
+          "entity": "SPZ_CA",
+          "period": "Aug",
+          "account": "R2000",
+          "amount_usd": 1548.04,
+          "note": "reverse misstatement (natural sign, USD)"
+        },
+        {
+          "system": "HFM",
+          "entity": "SPZ_CA",
+          "period": "Aug",
+          "account": "T1000",
+          "amount_usd": 505.94,
+          "note": "reverse misstatement (natural sign, USD)"
+        }
+      ]
+    },
+    {
+      "issue_id": "SI-13",
+      "issue_type": "FX_TRANSLATION",
+      "category": "GL vs HFM break",
+      "title": "SPZ_CA Sep P&L translated at Aug average rate 0.7265 instead of Sep average 0.7234",
+      "entities": [
+        "SPZ_CA"
+      ],
+      "periods": [
+        "Sep"
+      ],
+      "impact_usd": 40088.97,
+      "root_cause": "HFM rate table for Sep carried the wrong AvgRate for CAD. P&L accounts must translate at the monthly average rate.",
+      "recommended_fix": "Correct HFM CAD AvgRate for Sep to 0.7234; re-consolidate SPZ_CA.",
+      "evidence": [
+        "LRG Treasury FX rates file",
+        "Every SPZ_CA Sep account off by the same ratio"
+      ],
+      "cells": [
+        {
+          "entity": "SPZ_CA",
+          "period": "Sep",
+          "hfm_account": "C1000",
+          "source_account": null,
+          "impact_usd": 5519.15
+        },
+        {
+          "entity": "SPZ_CA",
+          "period": "Sep",
+          "hfm_account": "C1100",
+          "source_account": null,
+          "impact_usd": 702.49
+        },
+        {
+          "entity": "SPZ_CA",
+          "period": "Sep",
+          "hfm_account": "C2000",
+          "source_account": null,
+          "impact_usd": 5009.4
+        },
+        {
+          "entity": "SPZ_CA",
+          "period": "Sep",
+          "hfm_account": "C2100",
+          "source_account": null,
+          "impact_usd": 599.38
+        },
+        {
+          "entity": "SPZ_CA",
+          "period": "Sep",
+          "hfm_account": "C3000",
+          "source_account": null,
+          "impact_usd": 2202.99
+        },
+        {
+          "entity": "SPZ_CA",
+          "period": "Sep",
+          "hfm_account": "C3100",
+          "source_account": null,
+          "impact_usd": 541.37
+        },
+        {
+          "entity": "SPZ_CA",
+          "period": "Sep",
+          "hfm_account": "C4000",
+          "source_account": null,
+          "impact_usd": 246.23
+        },
+        {
+          "entity": "SPZ_CA",
+          "period": "Sep",
+          "hfm_account": "C5000",
+          "source_account": null,
+          "impact_usd": 424.68
+        },
+        {
+          "entity": "SPZ_CA",
+          "period": "Sep",
+          "hfm_account": "D1000",
+          "source_account": null,
+          "impact_usd": 1254.96
+        },
+        {
+          "entity": "SPZ_CA",
+          "period": "Sep",
+          "hfm_account": "G1000",
+          "source_account": null,
+          "impact_usd": 1395.05
+        },
+        {
+          "entity": "SPZ_CA",
+          "period": "Sep",
+          "hfm_account": "G1100",
+          "source_account": null,
+          "impact_usd": 112.29
+        },
+        {
+          "entity": "SPZ_CA",
+          "period": "Sep",
+          "hfm_account": "G9000",
+          "source_account": null,
+          "impact_usd": 957.17
+        },
+        {
+          "entity": "SPZ_CA",
+          "period": "Sep",
+          "hfm_account": "R1000",
+          "source_account": null,
+          "impact_usd": 19143.33
+        },
+        {
+          "entity": "SPZ_CA",
+          "period": "Sep",
+          "hfm_account": "R1200",
+          "source_account": null,
+          "impact_usd": -1270.29
+        },
+        {
+          "entity": "SPZ_CA",
+          "period": "Sep",
+          "hfm_account": "R2000",
+          "source_account": null,
+          "impact_usd": 520.75
+        },
+        {
+          "entity": "SPZ_CA",
+          "period": "Sep",
+          "hfm_account": "T1000",
+          "source_account": null,
+          "impact_usd": 189.44
+        }
+      ],
+      "correcting_entries": [
+        {
+          "system": "HFM",
+          "entity": "SPZ_CA",
+          "period": "Sep",
+          "account": "C1000",
+          "amount_usd": -5519.15,
+          "note": "reverse misstatement (natural sign, USD)"
+        },
+        {
+          "system": "HFM",
+          "entity": "SPZ_CA",
+          "period": "Sep",
+          "account": "C1100",
+          "amount_usd": -702.49,
+          "note": "reverse misstatement (natural sign, USD)"
+        },
+        {
+          "system": "HFM",
+          "entity": "SPZ_CA",
+          "period": "Sep",
+          "account": "C2000",
+          "amount_usd": -5009.4,
+          "note": "reverse misstatement (natural sign, USD)"
+        },
+        {
+          "system": "HFM",
+          "entity": "SPZ_CA",
+          "period": "Sep",
+          "account": "C2100",
+          "amount_usd": -599.38,
+          "note": "reverse misstatement (natural sign, USD)"
+        },
+        {
+          "system": "HFM",
+          "entity": "SPZ_CA",
+          "period": "Sep",
+          "account": "C3000",
+          "amount_usd": -2202.99,
+          "note": "reverse misstatement (natural sign, USD)"
+        },
+        {
+          "system": "HFM",
+          "entity": "SPZ_CA",
+          "period": "Sep",
+          "account": "C3100",
+          "amount_usd": -541.37,
+          "note": "reverse misstatement (natural sign, USD)"
+        },
+        {
+          "system": "HFM",
+          "entity": "SPZ_CA",
+          "period": "Sep",
+          "account": "C4000",
+          "amount_usd": -246.23,
+          "note": "reverse misstatement (natural sign, USD)"
+        },
+        {
+          "system": "HFM",
+          "entity": "SPZ_CA",
+          "period": "Sep",
+          "account": "C5000",
+          "amount_usd": -424.68,
+          "note": "reverse misstatement (natural sign, USD)"
+        },
+        {
+          "system": "HFM",
+          "entity": "SPZ_CA",
+          "period": "Sep",
+          "account": "D1000",
+          "amount_usd": -1254.96,
+          "note": "reverse misstatement (natural sign, USD)"
+        },
+        {
+          "system": "HFM",
+          "entity": "SPZ_CA",
+          "period": "Sep",
+          "account": "G1000",
+          "amount_usd": -1395.05,
+          "note": "reverse misstatement (natural sign, USD)"
+        },
+        {
+          "system": "HFM",
+          "entity": "SPZ_CA",
+          "period": "Sep",
+          "account": "G1100",
+          "amount_usd": -112.29,
+          "note": "reverse misstatement (natural sign, USD)"
+        },
+        {
+          "system": "HFM",
+          "entity": "SPZ_CA",
+          "period": "Sep",
+          "account": "G9000",
+          "amount_usd": -957.17,
+          "note": "reverse misstatement (natural sign, USD)"
+        },
+        {
+          "system": "HFM",
+          "entity": "SPZ_CA",
+          "period": "Sep",
+          "account": "R1000",
+          "amount_usd": -19143.33,
+          "note": "reverse misstatement (natural sign, USD)"
+        },
+        {
+          "system": "HFM",
+          "entity": "SPZ_CA",
+          "period": "Sep",
+          "account": "R1200",
+          "amount_usd": 1270.29,
+          "note": "reverse misstatement (natural sign, USD)"
+        },
+        {
+          "system": "HFM",
+          "entity": "SPZ_CA",
+          "period": "Sep",
+          "account": "R2000",
+          "amount_usd": -520.75,
+          "note": "reverse misstatement (natural sign, USD)"
+        },
+        {
+          "system": "HFM",
+          "entity": "SPZ_CA",
+          "period": "Sep",
+          "account": "T1000",
+          "amount_usd": -189.44,
+          "note": "reverse misstatement (natural sign, USD)"
+        }
+      ]
+    },
+    {
+      "issue_id": "SI-14",
+      "issue_type": "DUPLICATE_HFM_JOURNAL",
+      "category": "GL vs HFM break",
+      "title": "Top-side journal JNL-26-0812 posted twice (duplicate JNL-26-0831)",
+      "entities": [
+        "SPZ_US"
+      ],
+      "periods": [
+        "Aug"
+      ],
+      "impact_usd": 412500.0,
+      "root_cause": "JNL-26-0831 repeats JNL-26-0812 (same entity, account, amount and support). Posted a day later by a different preparer.",
+      "recommended_fix": "Reverse JNL-26-0831 in HFM; add duplicate-check control to journal approval.",
+      "evidence": [
+        "HFM journal register JNL-26-0812 and JNL-26-0831"
+      ],
+      "cells": [
+        {
+          "entity": "SPZ_US",
+          "period": "Aug",
+          "hfm_account": "D1000",
+          "source_account": null,
+          "impact_usd": 412500.0
+        }
+      ],
+      "correcting_entries": [
+        {
+          "system": "HFM",
+          "entity": "SPZ_US",
+          "period": "Aug",
+          "account": "D1000",
+          "amount_usd": -412500.0,
+          "note": "reverse misstatement (natural sign, USD)"
+        }
+      ]
+    },
+    {
+      "issue_id": "SI-15",
+      "issue_type": "DUPLICATE_HFM_JOURNAL",
+      "category": "GL vs HFM break",
+      "title": "Top-side journal JNL-26-0916 posted twice (duplicate JNL-26-0934)",
+      "entities": [
+        "SPZ_US"
+      ],
+      "periods": [
+        "Sep"
+      ],
+      "impact_usd": 118340.0,
+      "root_cause": "JNL-26-0934 repeats JNL-26-0916 (same entity, account, amount and support). Posted a day later by a different preparer.",
+      "recommended_fix": "Reverse JNL-26-0934 in HFM; add duplicate-check control to journal approval.",
+      "evidence": [
+        "HFM journal register JNL-26-0916 and JNL-26-0934"
+      ],
+      "cells": [
+        {
+          "entity": "SPZ_US",
+          "period": "Sep",
+          "hfm_account": "C3000",
+          "source_account": null,
+          "impact_usd": -118340.0
+        }
+      ],
+      "correcting_entries": [
+        {
+          "system": "HFM",
+          "entity": "SPZ_US",
+          "period": "Sep",
+          "account": "C3000",
+          "amount_usd": 118340.0,
+          "note": "reverse misstatement (natural sign, USD)"
+        }
+      ]
+    },
+    {
+      "issue_id": "SI-16",
+      "issue_type": "DUPLICATE_HFM_JOURNAL",
+      "category": "GL vs HFM break",
+      "title": "Top-side journal JNL-26-0917 posted twice (duplicate JNL-26-0935)",
+      "entities": [
+        "SPZ_US"
+      ],
+      "periods": [
+        "Sep"
+      ],
+      "impact_usd": 185000.0,
+      "root_cause": "JNL-26-0935 repeats JNL-26-0917 (same entity, account, amount and support). Posted a day later by a different preparer.",
+      "recommended_fix": "Reverse JNL-26-0935 in HFM; add duplicate-check control to journal approval.",
+      "evidence": [
+        "HFM journal register JNL-26-0917 and JNL-26-0935"
+      ],
+      "cells": [
+        {
+          "entity": "SPZ_US",
+          "period": "Sep",
+          "hfm_account": "G1100",
+          "source_account": null,
+          "impact_usd": 185000.0
+        }
+      ],
+      "correcting_entries": [
+        {
+          "system": "HFM",
+          "entity": "SPZ_US",
+          "period": "Sep",
+          "account": "G1100",
+          "amount_usd": -185000.0,
+          "note": "reverse misstatement (natural sign, USD)"
+        }
+      ]
+    },
+    {
+      "issue_id": "SI-17",
+      "issue_type": "DUPLICATE_HFM_JOURNAL",
+      "category": "GL vs HFM break",
+      "title": "Top-side journal JNL-26-0818 posted twice (duplicate JNL-26-0829)",
+      "entities": [
+        "SPZ_US"
+      ],
+      "periods": [
+        "Aug"
+      ],
+      "impact_usd": 96400.0,
+      "root_cause": "JNL-26-0829 repeats JNL-26-0818 (same entity, account, amount and support). Posted a day later by a different preparer.",
+      "recommended_fix": "Reverse JNL-26-0829 in HFM; add duplicate-check control to journal approval.",
+      "evidence": [
+        "HFM journal register JNL-26-0818 and JNL-26-0829"
+      ],
+      "cells": [
+        {
+          "entity": "SPZ_US",
+          "period": "Aug",
+          "hfm_account": "C2100",
+          "source_account": null,
+          "impact_usd": 96400.0
+        }
+      ],
+      "correcting_entries": [
+        {
+          "system": "HFM",
+          "entity": "SPZ_US",
+          "period": "Aug",
+          "account": "C2100",
+          "amount_usd": -96400.0,
+          "note": "reverse misstatement (natural sign, USD)"
+        }
+      ]
+    },
+    {
+      "issue_id": "SI-18",
+      "issue_type": "SIGN_FLIP",
+      "category": "GL vs HFM break",
+      "title": "SPZ_US Jul R1200 Sales Discounts & Promotions loaded with reversed sign",
+      "entities": [
+        "SPZ_US"
+      ],
+      "periods": [
+        "Jul"
+      ],
+      "impact_usd": 4166921.72,
+      "root_cause": "Load file for this cell carried the wrong sign (natural-sign conversion skipped).",
+      "recommended_fix": "Reload SPZ_US Jul R1200 with correct sign.",
+      "evidence": [
+        "HFM extract SPZ_US R1200 Jul vs adjacent periods"
+      ],
+      "cells": [
+        {
+          "entity": "SPZ_US",
+          "period": "Jul",
+          "hfm_account": "R1200",
+          "source_account": 40300,
+          "impact_usd": 4166921.72
+        }
+      ],
+      "correcting_entries": [
+        {
+          "system": "HFM",
+          "entity": "SPZ_US",
+          "period": "Jul",
+          "account": "R1200",
+          "amount_usd": -4166921.72,
+          "note": "reverse misstatement (natural sign, USD)"
+        }
+      ]
+    },
+    {
+      "issue_id": "SI-19",
+      "issue_type": "SIGN_FLIP",
+      "category": "GL vs HFM break",
+      "title": "SPZ_FR Sep R2200 Initial & Renewal Franchise Fees loaded with reversed sign",
+      "entities": [
+        "SPZ_FR"
+      ],
+      "periods": [
+        "Sep"
+      ],
+      "impact_usd": 150000.0,
+      "root_cause": "Load file for this cell carried the wrong sign (natural-sign conversion skipped).",
+      "recommended_fix": "Reload SPZ_FR Sep R2200 with correct sign.",
+      "evidence": [
+        "HFM extract SPZ_FR R2200 Sep vs adjacent periods"
+      ],
+      "cells": [
+        {
+          "entity": "SPZ_FR",
+          "period": "Sep",
+          "hfm_account": "R2200",
+          "source_account": 41300,
+          "impact_usd": -150000.0
+        }
+      ],
+      "correcting_entries": [
+        {
+          "system": "HFM",
+          "entity": "SPZ_FR",
+          "period": "Sep",
+          "account": "R2200",
+          "amount_usd": 150000.0,
+          "note": "reverse misstatement (natural sign, USD)"
+        }
+      ]
+    },
+    {
+      "issue_id": "SI-20",
+      "issue_type": "DUPLICATE_GL_ENTRY",
+      "category": "Source data quality",
+      "title": "SPZ_US 50100: Valley Dairy Cheese Co. bill entered twice ($152,356.54 USD)",
+      "entities": [
+        "SPZ_US"
+      ],
+      "periods": [
+        "Sep"
+      ],
+      "impact_usd": 152356.54,
+      "root_cause": "Internal ID 4904951 duplicates 4833187 - exact duplicate (same vendor, Ref No., amount). Flows to HFM, so no tie-out break.",
+      "recommended_fix": "Void Internal ID 4904951 in NetSuite (or reverse if paid); reload HFM Sep.",
+      "evidence": [
+        "NetSuite Internal ID 4833187",
+        "NetSuite Internal ID 4904951"
+      ],
+      "cells": [
+        {
+          "entity": "SPZ_US",
+          "period": "Sep",
+          "hfm_account": "C1000",
+          "source_account": 50100,
+          "impact_usd": 152356.54
+        }
+      ],
+      "correcting_entries": [
+        {
+          "system": "NetSuite",
+          "entity": "SPZ_US",
+          "period": "Sep",
+          "account": "C1000",
+          "amount_usd": -152356.54,
+          "note": "reverse misstatement (natural sign, USD)"
+        }
+      ]
+    },
+    {
+      "issue_id": "SI-21",
+      "issue_type": "DUPLICATE_GL_ENTRY",
+      "category": "Source data quality",
+      "title": "SPZ_US 60200: Whitfield Brennan LLP bill entered twice ($36,556.03 USD)",
+      "entities": [
+        "SPZ_US"
+      ],
+      "periods": [
+        "Jul"
+      ],
+      "impact_usd": 36556.03,
+      "root_cause": "Internal ID 4904952 duplicates 4854678 - near-duplicate (Ref No. keyed without hyphen). Flows to HFM, so no tie-out break.",
+      "recommended_fix": "Void Internal ID 4904952 in NetSuite (or reverse if paid); reload HFM Jul.",
+      "evidence": [
+        "NetSuite Internal ID 4854678",
+        "NetSuite Internal ID 4904952"
+      ],
+      "cells": [
+        {
+          "entity": "SPZ_US",
+          "period": "Jul",
+          "hfm_account": "G1100",
+          "source_account": 60200,
+          "impact_usd": 36556.03
+        }
+      ],
+      "correcting_entries": [
+        {
+          "system": "NetSuite",
+          "entity": "SPZ_US",
+          "period": "Jul",
+          "account": "G1100",
+          "amount_usd": -36556.03,
+          "note": "reverse misstatement (natural sign, USD)"
+        }
+      ]
+    },
+    {
+      "issue_id": "SI-22",
+      "issue_type": "DUPLICATE_GL_ENTRY",
+      "category": "Source data quality",
+      "title": "SPZ_CA 50110: Maple Leaf Foodservice bill entered twice ($41,200.09 CAD)",
+      "entities": [
+        "SPZ_CA"
+      ],
+      "periods": [
+        "Jul"
+      ],
+      "impact_usd": 30125.5,
+      "root_cause": "Internal ID 4904953 duplicates 4833359 - exact duplicate (same vendor, Ref No., amount). Flows to HFM, so no tie-out break.",
+      "recommended_fix": "Void Internal ID 4904953 in NetSuite (or reverse if paid); reload HFM Jul.",
+      "evidence": [
+        "NetSuite Internal ID 4833359",
+        "NetSuite Internal ID 4904953"
+      ],
+      "cells": [
+        {
+          "entity": "SPZ_CA",
+          "period": "Jul",
+          "hfm_account": "C1000",
+          "source_account": 50110,
+          "impact_usd": 30125.5
+        }
+      ],
+      "correcting_entries": [
+        {
+          "system": "NetSuite",
+          "entity": "SPZ_CA",
+          "period": "Jul",
+          "account": "C1000",
+          "amount_usd": -30125.5,
+          "note": "reverse misstatement (natural sign, USD)"
+        }
+      ]
+    },
+    {
+      "issue_id": "SI-23",
+      "issue_type": "DUPLICATE_GL_ENTRY",
+      "category": "Source data quality",
+      "title": "SPZ_FR 60400: Preston Ridge Office Partners LP bill entered twice ($38,000.00 USD)",
+      "entities": [
+        "SPZ_FR"
+      ],
+      "periods": [
+        "Aug"
+      ],
+      "impact_usd": 38000.0,
+      "root_cause": "Internal ID 4904954 duplicates 4854250 - near-duplicate (suffix 'A' added to Ref No.). Flows to HFM, so no tie-out break.",
+      "recommended_fix": "Void Internal ID 4904954 in NetSuite (or reverse if paid); reload HFM Aug.",
+      "evidence": [
+        "NetSuite Internal ID 4854250",
+        "NetSuite Internal ID 4904954"
+      ],
+      "cells": [
+        {
+          "entity": "SPZ_FR",
+          "period": "Aug",
+          "hfm_account": "G1000",
+          "source_account": 60400,
+          "impact_usd": 38000.0
+        }
+      ],
+      "correcting_entries": [
+        {
+          "system": "NetSuite",
+          "entity": "SPZ_FR",
+          "period": "Aug",
+          "account": "G1000",
+          "amount_usd": -38000.0,
+          "note": "reverse misstatement (natural sign, USD)"
+        }
+      ]
+    },
+    {
+      "issue_id": "SI-24",
+      "issue_type": "DUPLICATE_GL_ENTRY",
+      "category": "Source data quality",
+      "title": "SPZ_US 54200: OrderLoop POS bill entered twice ($58,968.00 USD)",
+      "entities": [
+        "SPZ_US"
+      ],
+      "periods": [
+        "Aug"
+      ],
+      "impact_usd": 58968.0,
+      "root_cause": "Internal ID 4904955 duplicates 4847560 - near-duplicate (Ref No. keyed without hyphen). Flows to HFM, so no tie-out break.",
+      "recommended_fix": "Void Internal ID 4904955 in NetSuite (or reverse if paid); reload HFM Aug.",
+      "evidence": [
+        "NetSuite Internal ID 4847560",
+        "NetSuite Internal ID 4904955"
+      ],
+      "cells": [
+        {
+          "entity": "SPZ_US",
+          "period": "Aug",
+          "hfm_account": "C5000",
+          "source_account": 54200,
+          "impact_usd": 58968.0
+        }
+      ],
+      "correcting_entries": [
+        {
+          "system": "NetSuite",
+          "entity": "SPZ_US",
+          "period": "Aug",
+          "account": "C5000",
+          "amount_usd": -58968.0,
+          "note": "reverse misstatement (natural sign, USD)"
+        }
+      ]
+    },
+    {
+      "issue_id": "SI-25",
+      "issue_type": "MISSING_ACCRUAL_REVERSAL",
+      "category": "Source data quality",
+      "title": "SPZ_US 52200: accrual not reversed in Aug - expense double-counted ($158,231.14)",
+      "entities": [
+        "SPZ_US"
+      ],
+      "periods": [
+        "Aug"
+      ],
+      "impact_usd": 158231.14,
+      "root_cause": "Expected auto-reversal 'REV - ACCR utilities unbilled - Texas North' on 8/1/2026 is missing; the actual bill also posted.",
+      "recommended_fix": "Post the reversal in Aug for $158,231.14; reload HFM.",
+      "evidence": [
+        "Accrual memo 'ACCR utilities unbilled - Texas North' with no matching REV entry"
+      ],
+      "cells": [
+        {
+          "entity": "SPZ_US",
+          "period": "Aug",
+          "hfm_account": "C3000",
+          "source_account": 52200,
+          "impact_usd": 158231.14
+        }
+      ],
+      "correcting_entries": [
+        {
+          "system": "NetSuite",
+          "entity": "SPZ_US",
+          "period": "Aug",
+          "account": "C3000",
+          "amount_usd": -158231.14,
+          "note": "reverse misstatement (natural sign, USD)"
+        }
+      ]
+    },
+    {
+      "issue_id": "SI-26",
+      "issue_type": "MISSING_ACCRUAL_REVERSAL",
+      "category": "Source data quality",
+      "title": "SPZ_FR 60200: accrual not reversed in Sep - expense double-counted ($142,600.00)",
+      "entities": [
+        "SPZ_FR"
+      ],
+      "periods": [
+        "Sep"
+      ],
+      "impact_usd": 142600.0,
+      "root_cause": "Expected auto-reversal 'REV - ACCR Aug legal fees - Harlow & Pierce LLP' on 9/1/2026 is missing; the actual bill also posted.",
+      "recommended_fix": "Post the reversal in Sep for $142,600.00; reload HFM.",
+      "evidence": [
+        "Accrual memo 'ACCR Aug legal fees - Harlow & Pierce LLP' with no matching REV entry"
+      ],
+      "cells": [
+        {
+          "entity": "SPZ_FR",
+          "period": "Sep",
+          "hfm_account": "G1100",
+          "source_account": 60200,
+          "impact_usd": 142600.0
+        }
+      ],
+      "correcting_entries": [
+        {
+          "system": "NetSuite",
+          "entity": "SPZ_FR",
+          "period": "Sep",
+          "account": "G1100",
+          "amount_usd": -142600.0,
+          "note": "reverse misstatement (natural sign, USD)"
+        }
+      ]
+    },
+    {
+      "issue_id": "SI-27",
+      "issue_type": "MISSING_ACCRUAL_REVERSAL",
+      "category": "Source data quality",
+      "title": "SPZ_US 54100: accrual not reversed in Sep - expense double-counted ($620,894.48)",
+      "entities": [
+        "SPZ_US"
+      ],
+      "periods": [
+        "Sep"
+      ],
+      "impact_usd": 620894.48,
+      "root_cause": "Expected auto-reversal 'REV - ACCR card processing fees' on 9/1/2026 is missing; the actual bill also posted.",
+      "recommended_fix": "Post the reversal in Sep for $620,894.48; reload HFM.",
+      "evidence": [
+        "Accrual memo 'ACCR card processing fees' with no matching REV entry"
+      ],
+      "cells": [
+        {
+          "entity": "SPZ_US",
+          "period": "Sep",
+          "hfm_account": "C5000",
+          "source_account": 54100,
+          "impact_usd": 620894.48
+        }
+      ],
+      "correcting_entries": [
+        {
+          "system": "NetSuite",
+          "entity": "SPZ_US",
+          "period": "Sep",
+          "account": "C5000",
+          "amount_usd": -620894.48,
+          "note": "reverse misstatement (natural sign, USD)"
+        }
+      ]
+    },
+    {
+      "issue_id": "SI-28",
+      "issue_type": "CAPEX_EXPENSED",
+      "category": "Source data quality",
+      "title": "SPZ_US 52300: capital purchase expensed ($412,860.00 USD)",
+      "entities": [
+        "SPZ_US"
+      ],
+      "periods": [
+        "Aug"
+      ],
+      "impact_usd": 412860.0,
+      "root_cause": "'Oven replacement program - 14 new conveyor ovens, purchase & install' is a long-lived asset, recorded to 52300 Repairs & Maintenance.",
+      "recommended_fix": "Reclass to fixed assets (capitalize) and start depreciation; reload HFM.",
+      "evidence": [
+        "NetSuite Internal ID 4914959"
+      ],
+      "cells": [
+        {
+          "entity": "SPZ_US",
+          "period": "Aug",
+          "hfm_account": "C3100",
+          "source_account": 52300,
+          "impact_usd": 412860.0
+        }
+      ],
+      "correcting_entries": [
+        {
+          "system": "NetSuite",
+          "entity": "SPZ_US",
+          "period": "Aug",
+          "account": "C3100",
+          "amount_usd": -412860.0,
+          "note": "reverse misstatement (natural sign, USD)"
+        }
+      ]
+    },
+    {
+      "issue_id": "SI-29",
+      "issue_type": "CAPEX_EXPENSED",
+      "category": "Source data quality",
+      "title": "SPZ_CA 54200: capital purchase expensed ($318,400.00 CAD)",
+      "entities": [
+        "SPZ_CA"
+      ],
+      "periods": [
+        "Jul"
+      ],
+      "impact_usd": 232814.08,
+      "root_cause": "'POS terminal hardware - 64 restaurants (new terminals, 5-yr life)' is a long-lived asset, recorded to 54200 Technology & POS Fees.",
+      "recommended_fix": "Reclass to fixed assets (capitalize) and start depreciation; reload HFM.",
+      "evidence": [
+        "NetSuite Internal ID 4914960"
+      ],
+      "cells": [
+        {
+          "entity": "SPZ_CA",
+          "period": "Jul",
+          "hfm_account": "C5000",
+          "source_account": 54200,
+          "impact_usd": 232814.08
+        }
+      ],
+      "correcting_entries": [
+        {
+          "system": "NetSuite",
+          "entity": "SPZ_CA",
+          "period": "Jul",
+          "account": "C5000",
+          "amount_usd": -232814.08,
+          "note": "reverse misstatement (natural sign, USD)"
+        }
+      ]
+    },
+    {
+      "issue_id": "SI-30",
+      "issue_type": "CAPEX_EXPENSED",
+      "category": "Source data quality",
+      "title": "SPZ_FR 60400: capital purchase expensed ($287,500.00 USD)",
+      "entities": [
+        "SPZ_FR"
+      ],
+      "periods": [
+        "Sep"
+      ],
+      "impact_usd": 287500.0,
+      "root_cause": "'Franchise training center build-out - progress billing #2' is a long-lived asset, recorded to 60400 Corporate Rent.",
+      "recommended_fix": "Reclass to fixed assets (capitalize) and start depreciation; reload HFM.",
+      "evidence": [
+        "NetSuite Internal ID 4914961"
+      ],
+      "cells": [
+        {
+          "entity": "SPZ_FR",
+          "period": "Sep",
+          "hfm_account": "G1000",
+          "source_account": 60400,
+          "impact_usd": 287500.0
+        }
+      ],
+      "correcting_entries": [
+        {
+          "system": "NetSuite",
+          "entity": "SPZ_FR",
+          "period": "Sep",
+          "account": "G1000",
+          "amount_usd": -287500.0,
+          "note": "reverse misstatement (natural sign, USD)"
+        }
+      ]
+    },
+    {
+      "issue_id": "SI-31",
+      "issue_type": "INTERCOMPANY_MISMATCH",
+      "category": "Source data quality",
+      "title": "IC royalty mismatch: SPZ_CA G9000 vs SPZ_FR R9000 (Jul) - $24,961.59 USD",
+      "entities": [
+        "SPZ_CA",
+        "SPZ_FR"
+      ],
+      "periods": [
+        "Jul"
+      ],
+      "impact_usd": 24961.59,
+      "root_cause": "CA booked royalty at superseded 4.5% rate; SPZ_FR billed 5%. SPZ_FR side is correct (5% of sales).",
+      "recommended_fix": "Book true-up in SPZ_CA 61100 to agree to SPZ_FR billing; confirm IC rate schedule.",
+      "evidence": [
+        "NetSuite Internal ID 4854874",
+        "HFM ICP matching report"
+      ],
+      "cells": [
+        {
+          "entity": "SPZ_CA",
+          "period": "Jul",
+          "hfm_account": "G9000",
+          "source_account": 61100,
+          "impact_usd": -24961.59
+        },
+        {
+          "entity": "SPZ_FR",
+          "period": "Jul",
+          "hfm_account": "R9000",
+          "source_account": 42100,
+          "impact_usd": 0.0
+        }
+      ],
+      "correcting_entries": [
+        {
+          "system": "NetSuite",
+          "entity": "SPZ_CA",
+          "period": "Jul",
+          "account": "G9000",
+          "amount_usd": 24961.59,
+          "note": "reverse misstatement (natural sign, USD)"
+        }
+      ]
+    },
+    {
+      "issue_id": "SI-32",
+      "issue_type": "INTERCOMPANY_MISMATCH",
+      "category": "Source data quality",
+      "title": "IC royalty mismatch: SPZ_US G9000 vs SPZ_FR R9000 (Sep) - $1,484,199.23 USD",
+      "entities": [
+        "SPZ_FR",
+        "SPZ_US"
+      ],
+      "periods": [
+        "Sep"
+      ],
+      "impact_usd": 1484199.23,
+      "root_cause": "US never booked Sep IC royalty expense; SPZ_FR booked income. SPZ_FR side is correct (5% of sales).",
+      "recommended_fix": "Book true-up in SPZ_US 61100 to agree to SPZ_FR billing; confirm IC rate schedule.",
+      "evidence": [
+        "NetSuite Internal ID 4854870",
+        "HFM ICP matching report"
+      ],
+      "cells": [
+        {
+          "entity": "SPZ_US",
+          "period": "Sep",
+          "hfm_account": "G9000",
+          "source_account": 61100,
+          "impact_usd": -1484199.23
+        },
+        {
+          "entity": "SPZ_FR",
+          "period": "Sep",
+          "hfm_account": "R9000",
+          "source_account": 42100,
+          "impact_usd": 0.0
+        }
+      ],
+      "correcting_entries": [
+        {
+          "system": "NetSuite",
+          "entity": "SPZ_US",
+          "period": "Sep",
+          "account": "G9000",
+          "amount_usd": 1484199.23,
+          "note": "reverse misstatement (natural sign, USD)"
+        }
+      ]
+    },
+    {
+      "issue_id": "SI-33",
+      "issue_type": "INTERCOMPANY_MISMATCH",
+      "category": "Source data quality",
+      "title": "IC royalty mismatch: SPZ_US G9000 vs SPZ_FR R9000 (Aug) - $90,000.00 USD",
+      "entities": [
+        "SPZ_FR",
+        "SPZ_US"
+      ],
+      "periods": [
+        "Aug"
+      ],
+      "impact_usd": 90000.0,
+      "root_cause": "digit transposition when keying the US Aug royalty. SPZ_FR side is correct (5% of sales).",
+      "recommended_fix": "Book true-up in SPZ_US 61100 to agree to SPZ_FR billing; confirm IC rate schedule.",
+      "evidence": [
+        "NetSuite Internal ID 4854865",
+        "HFM ICP matching report"
+      ],
+      "cells": [
+        {
+          "entity": "SPZ_US",
+          "period": "Aug",
+          "hfm_account": "G9000",
+          "source_account": 61100,
+          "impact_usd": 90000.0
+        },
+        {
+          "entity": "SPZ_FR",
+          "period": "Aug",
+          "hfm_account": "R9000",
+          "source_account": 42100,
+          "impact_usd": 0.0
+        }
+      ],
+      "correcting_entries": [
+        {
+          "system": "NetSuite",
+          "entity": "SPZ_US",
+          "period": "Aug",
+          "account": "G9000",
+          "amount_usd": -90000.0,
+          "note": "reverse misstatement (natural sign, USD)"
+        }
+      ]
+    }
+  ]
+}

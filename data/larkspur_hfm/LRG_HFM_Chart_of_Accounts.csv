@@ -1,0 +1,23 @@
+Account,Description,Type,Natural_Sign
+R1000,Company Restaurant Sales,Revenue,Positive
+R1100,Delivery & Service Fee Revenue,Revenue,Positive
+R1200,Sales Discounts & Promotions,Revenue (contra),Negative
+R2000,Franchise Royalty Revenue,Revenue,Positive
+R2100,Franchise Advertising Fund Revenue,Revenue,Positive
+R2200,Initial & Renewal Franchise Fees,Revenue,Positive
+R9000,Intercompany Royalty Revenue,Revenue,Positive
+C1000,Food & Paper Cost,Expense,Positive
+C1100,Third-Party Delivery Commissions,Expense,Positive
+C2000,Restaurant Labor,Expense,Positive
+C2100,Payroll Taxes & Benefits,Expense,Positive
+C3000,Occupancy,Expense,Positive
+C3100,Other Restaurant Operating Costs,Expense,Positive
+C4000,Advertising,Expense,Positive
+C5000,Payment Processing & Technology,Expense,Positive
+G1000,General & Administrative,Expense,Positive
+G1100,Professional Fees,Expense,Positive
+G9000,Intercompany Royalty Expense,Expense,Positive
+D1000,Depreciation & Amortization,Expense,Positive
+I1000,Interest Expense,Expense,Positive
+X1000,Transaction & Integration Costs,Expense,Positive
+T1000,Income Tax Expense,Expense,Positive

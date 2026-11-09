@@ -1,0 +1,13 @@
+JE_ID,Entity,Period,Account,Account_Description,ICP,Amount_USD,Description,Support,Created_By,Created_On,Approved_By,Status
+JNL-26-0711,SPZ_US,Jul,D1000,Depreciation & Amortization,[ICP None],412500.0,PPA - depreciation on fair-value step-up of restaurant equipment,PPA memo v2 / valuation rpt s4.3,a.lindgren,8/6/2026 2:10 PM,m.castellano,Posted
+JNL-26-0714,SPZ_US,Jul,C3000,Occupancy,[ICP None],-118340.0,ASC 842 alignment - straight-line rent adjustment (LRG policy),Lease schedule LS-SPZ-Q3,p.mbeki,8/6/2026 3:44 PM,m.castellano,Posted
+JNL-26-0812,SPZ_US,Aug,D1000,Depreciation & Amortization,[ICP None],412500.0,PPA - depreciation on fair-value step-up of restaurant equipment,PPA memo v2 / valuation rpt s4.3,a.lindgren,9/5/2026 10:03 AM,m.castellano,Posted
+JNL-26-0815,SPZ_US,Aug,C3000,Occupancy,[ICP None],-118340.0,ASC 842 alignment - straight-line rent adjustment (LRG policy),Lease schedule LS-SPZ-Q3,p.mbeki,9/5/2026 11:20 AM,m.castellano,Posted
+JNL-26-0818,SPZ_US,Aug,C2100,Payroll Taxes & Benefits,[ICP None],96400.0,Workers' comp reserve true-up per actuarial study (Q3),Actuarial rpt 2026-Q3,a.lindgren,9/5/2026 4:02 PM,m.castellano,Posted
+JNL-26-0829,SPZ_US,Aug,C2100,Payroll Taxes & Benefits,[ICP None],96400.0,Workers' comp reserve true-up per actuarial study (Q3),Actuarial rpt 2026-Q3,c.huang,9/6/2026 9:40 AM,m.castellano,Posted
+JNL-26-0831,SPZ_US,Aug,D1000,Depreciation & Amortization,[ICP None],412500.0,PPA - depreciation on fair-value step-up of restaurant equipment,PPA memo v2 / valuation rpt s4.3,c.huang,9/6/2026 9:14 AM,m.castellano,Posted
+JNL-26-0913,SPZ_US,Sep,D1000,Depreciation & Amortization,[ICP None],412500.0,PPA - depreciation on fair-value step-up of restaurant equipment,PPA memo v2 / valuation rpt s4.3,a.lindgren,10/6/2026 9:15 AM,m.castellano,Posted
+JNL-26-0916,SPZ_US,Sep,C3000,Occupancy,[ICP None],-118340.0,ASC 842 alignment - straight-line rent adjustment (LRG policy),Lease schedule LS-SPZ-Q3,p.mbeki,10/6/2026 9:52 AM,m.castellano,Posted
+JNL-26-0917,SPZ_US,Sep,G1100,Professional Fees,[ICP None],185000.0,Accrue Q3 statutory audit fee - Whitfield Brennan LLP,Engagement letter EL-2026-SPZ,p.mbeki,10/6/2026 10:31 AM,m.castellano,Posted
+JNL-26-0934,SPZ_US,Sep,C3000,Occupancy,[ICP None],-118340.0,ASC 842 alignment - straight-line rent adjustment (LRG policy),Lease schedule LS-SPZ-Q3,c.huang,10/7/2026 8:47 AM,m.castellano,Posted
+JNL-26-0935,SPZ_US,Sep,G1100,Professional Fees,[ICP None],185000.0,Accrue Q3 audit fee - Whitfield Brennan,Engagement letter EL-2026-SPZ,c.huang,10/7/2026 9:05 AM,m.castellano,Posted
