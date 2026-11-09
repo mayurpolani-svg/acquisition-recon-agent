@@ -596,7 +596,10 @@ def dup_entry(sid, ent, per, acct, name, ref_variant=None, days_later=6):
         r = base.to_dict()
         r["Internal ID"] = int(SEQ["id"] + 50_000 + int(sid[-2:]))
         r["Document Number"] = f"BILL-{int(base['Document Number'][5:]) + 7_311:06d}"
-        r["Created Date"] = base["Created Date"] + timedelta(days=days_later, hours=2)
+        # keyed days later, but still before that month's HFM extract (so it flows into HFM)
+        cap = LOAD_TS[per] - timedelta(hours=3)
+        r["Created Date"] = max(min(base["Created Date"] + timedelta(days=days_later, hours=2), cap),
+                                base["Created Date"] + timedelta(hours=1))
         r["Created By"] = [u for u in (AP_CA if ent == "SPZ_CA" else AP_US) if u != base["Created By"]][0]
         if ref_variant:
             r["Ref No."] = ref_variant(base["Ref No."])
